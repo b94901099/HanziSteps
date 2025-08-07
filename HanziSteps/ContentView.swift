@@ -10,52 +10,90 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    @Query private var stories: [Story]
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+        NavigationView {
+            VStack(spacing: 30) {
+                Text("步步識字")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                
+                Text("歡迎來到漢字學習世界！")
+                    .font(.title2)
+                    .foregroundColor(.secondary)
+                
+                // 故事列表
+                if !stories.isEmpty {
+                    VStack(spacing: 15) {
+                        Text("可用的故事 (\(stories.count) 個):")
+                            .font(.headline)
+                            .foregroundColor(.secondary)
+                        
+                        ForEach(stories, id: \.id) { story in
+                            NavigationLink(destination: StoryReaderView(storyId: story.id)) {
+                                HStack {
+                                    Image(systemName: "book.fill")
+                                        .foregroundColor(.blue)
+                                    VStack(alignment: .leading) {
+                                        Text(story.title)
+                                            .font(.title3)
+                                            .fontWeight(.semibold)
+                                        Text(story.storyDescription)
+                                            .font(.caption)
+                                            .foregroundColor(.secondary)
+                                    }
+                                    Spacer()
+                                    Text("\(story.sentences.count) 句")
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                }
+                                .padding()
+                                .background(Color(.systemGray6))
+                                .cornerRadius(10)
+                            }
+                        }
+                    }
+                    .padding(.horizontal)
+                } else {
+                    VStack(spacing: 15) {
+                        Text("正在載入故事...")
+                            .font(.title2)
+                            .foregroundColor(.secondary)
+                        
+                        Button("重新載入故事") {
+                            // 強制重新載入數據
+                            DataManager.shared.initializeLocalData(in: modelContext)
+                        }
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
                     }
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                
+                // 學習按鈕
+                NavigationLink(destination: LearningView()) {
+                    HStack {
+                        Image(systemName: "brain.head.profile")
+                        Text("認字練習")
                     }
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white)
+                    .frame(width: 200, height: 50)
+                    .background(Color.green)
+                    .cornerRadius(25)
                 }
+                
+                Spacer()
             }
-        } detail: {
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
+            .padding()
         }
     }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+        .modelContainer(for: [Sentence.self, Story.self], inMemory: true)
 }

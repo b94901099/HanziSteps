@@ -1,0 +1,916 @@
+[
+  {
+    "id": "story_pangu",
+    "title": "盤古開天",
+    "storyDescription": "傳說中盤古開天闢地的故事",
+    "level": 1,
+    "coverImageUrl": "img_story_pangu_cover.png",
+    "isUnlocked": true,
+    "sentences": [
+      {
+        "id": "sent_pangu_01",
+        "text": "很久很久，很久很久以前，",
+        "words": ["很", "久", "以", "前"],
+        "answerPositions": [0, 1, 6, 9],
+        "order": 1,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_01.png"
+      },
+      {
+        "id": "sent_pangu_02",
+        "text": "世界不是現在這個樣子。",
+        "words": ["世", "界", "現", "在", "樣", "子"],
+        "answerPositions": [0, 1, 4, 5, 8, 9],
+        "order": 2,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_01.png"
+      },
+      {
+        "id": "sent_pangu_03",
+        "text": "沒有天，沒有地。",
+        "words": ["沒", "有", "天", "地"],
+        "answerPositions": [0, 1, 3, 6],
+        "order": 3,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_01.png"
+      },
+      {
+        "id": "sent_pangu_04",
+        "text": "沒有山，沒有水。",
+        "words": ["沒", "有", "山", "水"],
+        "answerPositions": [0, 1, 3, 6],
+        "order": 4,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_02.png"
+      },
+      {
+        "id": "sent_pangu_05",
+        "text": "沒有東，沒有西，也沒有南和北。",
+        "words": ["沒", "有", "東", "西", "南", "北"],
+        "answerPositions": [0, 1, 3, 6, 10, 13],
+        "order": 5,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_02.png"
+      },
+      {
+        "id": "sent_pangu_06",
+        "text": "沒有太陽，沒有月亮，也沒有星星。",
+        "words": ["沒", "有", "太", "陽", "月", "亮", "星"],
+        "answerPositions": [0, 1, 3, 4, 7, 8, 12, 13],
+        "order": 6,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_03.png"
+      },
+      {
+        "id": "sent_pangu_07",
+        "text": "沒有風，沒有雨，也沒有雲。",
+        "words": ["沒", "有", "風", "雨", "雲"],
+        "answerPositions": [0, 1, 3, 6, 10],
+        "order": 7,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_04.png"
+      },
+      {
+        "id": "sent_pangu_08",
+        "text": "沒有花，沒有草，也沒有大樹。",
+        "words": ["沒", "有", "花", "草", "大", "樹"],
+        "answerPositions": [0, 1, 3, 6, 10, 11],
+        "order": 8,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_05.png"
+      },
+      {
+        "id": "sent_pangu_09",
+        "text": "到處都是黑漆漆、黏糊糊的，",
+        "words": ["到", "處", "都", "黑", "漆", "黏", "糊"],
+        "answerPositions": [0, 1, 3, 5, 6, 9, 10],
+        "order": 9,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_06.png"
+      },
+      {
+        "id": "sent_pangu_10",
+        "text": "像一顆好大好大的雞蛋。",
+        "words": ["像", "一", "顆", "好", "大", "雞", "蛋"],
+        "answerPositions": [0, 2, 3, 5, 6, 8, 9],
+        "order": 10,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_06.png"
+      },
+      {
+        "id": "sent_pangu_11",
+        "text": "這個世界就是一顆大雞蛋。",
+        "words": ["這", "個", "世", "界", "就", "一", "顆", "大", "雞", "蛋"],
+        "answerPositions": [0, 1, 3, 4, 6, 8, 9, 11, 12, 13],
+        "order": 11,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_06.png"
+      },
+      {
+        "id": "sent_pangu_12",
+        "text": "就在這個大雞蛋裡面，",
+        "words": ["就", "在", "這", "個", "大", "雞", "蛋", "裡"],
+        "answerPositions": [0, 1, 3, 4, 6, 7, 9, 11],
+        "order": 12,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_07.png"
+      },
+      {
+        "id": "sent_pangu_13",
+        "text": "睡著一個好大好大的巨人。",
+        "words": ["睡", "著", "一", "個", "好", "大", "巨", "人"],
+        "answerPositions": [0, 1, 3, 4, 6, 7, 9, 10],
+        "order": 13,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_07.png"
+      },
+      {
+        "id": "sent_pangu_14",
+        "text": "他的名字，叫做「盤古」。",
+        "words": ["他", "的", "名", "字", "叫", "做", "盤", "古"],
+        "answerPositions": [0, 1, 3, 4, 6, 7, 10, 11],
+        "order": 14,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_07.png"
+      },
+      {
+        "id": "sent_pangu_15",
+        "text": "盤古睡了好久好久，",
+        "words": ["盤", "古", "睡", "了", "好", "久"],
+        "answerPositions": [0, 1, 3, 4, 6, 7],
+        "order": 15,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_07.png"
+      },
+      {
+        "id": "sent_pangu_16",
+        "text": "睡了一萬年，",
+        "words": ["睡", "了", "一", "萬", "年"],
+        "answerPositions": [0, 1, 3, 4, 5],
+        "order": 16,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_07.png"
+      },
+      {
+        "id": "sent_pangu_17",
+        "text": "又睡了八千年，",
+        "words": ["又", "睡", "了", "八", "千", "年"],
+        "answerPositions": [0, 1, 3, 5, 6, 7],
+        "order": 17,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_07.png"
+      },
+      {
+        "id": "sent_pangu_18",
+        "text": "睡得好飽好飽。",
+        "words": ["睡", "得", "好", "飽"],
+        "answerPositions": [0, 1, 3, 4],
+        "order": 18,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_07.png"
+      },
+      {
+        "id": "sent_pangu_19",
+        "text": "有一天，盤古終於醒來了。",
+        "words": ["有", "一", "天", "盤", "古", "終", "於", "醒"],
+        "answerPositions": [0, 1, 2, 4, 5, 7, 8, 10],
+        "order": 19,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_08.png"
+      },
+      {
+        "id": "sent_pangu_20",
+        "text": "他睜開眼睛，但什麼也看不見，到處都是黑漆漆的。",
+        "words": ["他", "睜", "開", "眼", "睛", "什", "麼", "看", "見", "黑", "漆"],
+        "answerPositions": [0, 1, 2, 4, 5, 8, 9, 12, 13, 17, 18],
+        "order": 20,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_08.png"
+      },
+      {
+        "id": "sent_pangu_21",
+        "text": "他說：「這裡好黑啊！這裡好悶啊！我想出去！」",
+        "words": ["他", "說", "這", "裡", "好", "黑", "悶", "想", "出"],
+        "answerPositions": [0, 1, 4, 5, 7, 8, 12, 16, 19],
+        "order": 21,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_08.png"
+      },
+      {
+        "id": "sent_pangu_22",
+        "text": "他想站起來，可是手腳都伸不開，",
+        "words": ["他", "想", "站", "起", "可", "是", "手", "腳", "伸"],
+        "answerPositions": [0, 1, 3, 4, 7, 8, 10, 11, 14],
+        "order": 22,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_08.png"
+      },
+      {
+        "id": "sent_pangu_23",
+        "text": "身體被雞蛋殼緊緊地包住，",
+        "words": ["身", "體", "被", "雞", "蛋", "殼", "緊", "包"],
+        "answerPositions": [0, 1, 3, 5, 6, 7, 9, 12],
+        "order": 23,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_08.png"
+      },
+      {
+        "id": "sent_pangu_24",
+        "text": "他一抬頭，頭就撞到雞蛋殼。",
+        "words": ["他", "一", "抬", "頭", "就", "撞", "雞", "蛋", "殼"],
+        "answerPositions": [0, 1, 3, 4, 6, 8, 11, 12, 13],
+        "order": 24,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_08.png"
+      },
+      {
+        "id": "sent_pangu_25",
+        "text": "他一揮手，手也撞到雞蛋殼。",
+        "words": ["他", "一", "揮", "手", "也", "撞", "雞", "蛋", "殼"],
+        "answerPositions": [0, 1, 3, 4, 6, 8, 11, 12, 13],
+        "order": 25,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_08.png"
+      },
+      {
+        "id": "sent_pangu_26",
+        "text": "他一抬腳，腳也撞到雞蛋殼。",
+        "words": ["他", "一", "抬", "腳", "也", "撞", "雞", "蛋", "殼"],
+        "answerPositions": [0, 1, 3, 4, 6, 8, 11, 12, 13],
+        "order": 26,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_08.png"
+      },
+      {
+        "id": "sent_pangu_27",
+        "text": "盤古有一點生氣。",
+        "words": ["盤", "古", "有", "一", "點", "生", "氣"],
+        "answerPositions": [0, 1, 3, 4, 5, 7, 8],
+        "order": 27,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_27.png"
+      },
+      {
+        "id": "sent_pangu_28",
+        "text": "他找到一把又大又亮的斧頭。",
+        "words": ["他", "找", "到", "一", "把", "又", "大", "亮", "斧", "頭"],
+        "answerPositions": [0, 1, 2, 4, 5, 7, 8, 10, 12, 13],
+        "order": 28,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_28.png"
+      },
+      {
+        "id": "sent_pangu_29",
+        "text": "他拿起大斧頭。",
+        "words": ["他", "拿", "起", "大", "斧", "頭"],
+        "answerPositions": [0, 1, 2, 4, 5, 6],
+        "order": 29,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_29.png"
+      },
+      {
+        "id": "sent_pangu_30",
+        "text": "他高高地舉起大斧頭，用盡全身的力氣，奮力一揮！",
+        "words": ["他", "高", "舉", "大", "斧", "頭", "用", "盡", "全", "身", "力", "奮"],
+        "answerPositions": [0, 2, 3, 5, 6, 7, 10, 11, 13, 14, 16, 18],
+        "order": 30,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_30.png"
+      },
+      {
+        "id": "sent_pangu_31",
+        "text": "「喀拉！」一聲好大好大的響聲！",
+        "words": ["一", "聲", "好", "大", "響", "聲"],
+        "answerPositions": [3, 4, 6, 7, 9, 10],
+        "order": 31,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_31.png"
+      },
+      {
+        "id": "sent_pangu_32",
+        "text": "那個好大好大的雞蛋殼，破了！",
+        "words": ["那", "個", "好", "大", "雞", "蛋", "殼", "破"],
+        "answerPositions": [0, 1, 3, 4, 6, 7, 8, 10],
+        "order": 32,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_32.png"
+      },
+      {
+        "id": "sent_pangu_33",
+        "text": "蛋裡面，有些輕飄飄的東西，它們喜歡往上飛。",
+        "words": ["蛋", "裡", "面", "輕", "飄", "東", "西", "喜", "歡", "往", "上", "飛"],
+        "answerPositions": [0, 1, 2, 5, 6, 8, 9, 12, 13, 15, 16, 17],
+        "order": 33,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_33.png"
+      },
+      {
+        "id": "sent_pangu_34",
+        "text": "它們一直飛，一直飛，",
+        "words": ["它", "們", "一", "直", "飛"],
+        "answerPositions": [0, 1, 3, 4, 6, 7],
+        "order": 34,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_34.png"
+      },
+      {
+        "id": "sent_pangu_35",
+        "text": "飛得好高好高，變成了藍色的天。",
+        "words": ["飛", "得", "好", "高", "變", "成", "藍", "色", "天"],
+        "answerPositions": [0, 1, 3, 4, 7, 8, 11, 12, 14],
+        "order": 35,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_35.png"
+      },
+      {
+        "id": "sent_pangu_36",
+        "text": "還有些重重的東西，它們不喜歡飛，就慢慢沉下去。",
+        "words": ["還", "重", "東", "西", "不", "喜", "歡", "慢", "沉"],
+        "answerPositions": [0, 3, 5, 6, 9, 11, 12, 15, 17],
+        "order": 36,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_36.png"
+      },
+      {
+        "id": "sent_pangu_37",
+        "text": "它們一直沉，一直沉，",
+        "words": ["它", "們", "一", "直", "沉"],
+        "answerPositions": [0, 1, 3, 4, 6, 7],
+        "order": 37,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_37.png"
+      },
+      {
+        "id": "sent_pangu_38",
+        "text": "沉到最下面，變成了黃土色的大地。",
+        "words": ["沉", "到", "最", "下", "面", "變", "成", "黃", "土", "色", "大", "地"],
+        "answerPositions": [0, 1, 3, 4, 5, 7, 8, 11, 12, 13, 15, 16],
+        "order": 38,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_38.png"
+      },
+      {
+        "id": "sent_pangu_39",
+        "text": "天和地，就這樣分開了！",
+        "words": ["天", "和", "地", "就", "這", "樣", "分", "開"],
+        "answerPositions": [0, 1, 2, 4, 5, 6, 8, 9],
+        "order": 39,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_39.png"
+      },
+      {
+        "id": "sent_pangu_40",
+        "text": "盤古站在天地中間，他好高興啊！",
+        "words": ["盤", "古", "站", "在", "天", "地", "中", "間", "好", "高", "興"],
+        "answerPositions": [0, 1, 3, 4, 6, 7, 9, 10, 12, 13, 14],
+        "order": 40,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_40.png"
+      },
+      {
+        "id": "sent_pangu_41",
+        "text": "天，是藍色的天，那麼美麗。",
+        "words": ["天", "藍", "色", "那", "麼", "美", "麗"],
+        "answerPositions": [0, 3, 4, 6, 7, 9, 10],
+        "order": 41,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_41.png"
+      },
+      {
+        "id": "sent_pangu_42",
+        "text": "地，是黃色的地，那麼厚實。",
+        "words": ["地", "黃", "色", "那", "麼", "厚", "實"],
+        "answerPositions": [0, 3, 4, 6, 7, 9, 10],
+        "order": 42,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_42.png"
+      },
+      {
+        "id": "sent_pangu_43",
+        "text": "可是，他很擔心，",
+        "words": ["可", "是", "他", "很", "擔", "心"],
+        "answerPositions": [0, 1, 3, 4, 6, 7],
+        "order": 43,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_43.png"
+      },
+      {
+        "id": "sent_pangu_44",
+        "text": "他怕天和地又會慢慢地、慢慢地合在一起。",
+        "words": ["他", "怕", "天", "和", "地", "又", "慢", "合", "一", "起"],
+        "answerPositions": [0, 1, 3, 4, 5, 7, 9, 12, 14, 15],
+        "order": 44,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_44.png"
+      },
+      {
+        "id": "sent_pangu_45",
+        "text": "那樣世界不就又變回黑漆漆的樣子了嗎？",
+        "words": ["那", "樣", "世", "界", "不", "就", "變", "回", "黑", "漆", "樣", "子"],
+        "answerPositions": [0, 1, 3, 4, 6, 7, 9, 10, 12, 13, 15, 16],
+        "order": 45,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_45.png"
+      },
+      {
+        "id": "sent_pangu_46",
+        "text": "他說：「不行！我要想個辦法！」",
+        "words": ["他", "說", "不", "行", "我", "要", "想", "個", "辦", "法"],
+        "answerPositions": [0, 1, 4, 5, 7, 8, 10, 12, 13, 14],
+        "order": 46,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_46.png"
+      },
+      {
+        "id": "sent_pangu_47",
+        "text": "於是，",
+        "words": ["於", "是"],
+        "answerPositions": [0, 1],
+        "order": 47,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_47.png"
+      },
+      {
+        "id": "sent_pangu_48",
+        "text": "他高高地撐起天。",
+        "words": ["他", "高", "撐", "起", "天"],
+        "answerPositions": [0, 2, 3, 4, 6],
+        "order": 48,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_48.png"
+      },
+      {
+        "id": "sent_pangu_49",
+        "text": "他重重地踏著地。",
+        "words": ["他", "重", "踏", "著", "地"],
+        "answerPositions": [0, 2, 3, 4, 6],
+        "order": 49,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_49.png"
+      },
+      {
+        "id": "sent_pangu_50",
+        "text": "他的頭頂著天，他的腳踩著地，",
+        "words": ["他", "的", "頭", "頂", "天", "腳", "踩", "地"],
+        "answerPositions": [0, 1, 3, 4, 6, 9, 10, 12],
+        "order": 50,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_50.png"
+      },
+      {
+        "id": "sent_pangu_51",
+        "text": "他就這樣站著，像一根好長好長的柱子。",
+        "words": ["他", "就", "這", "樣", "站", "像", "一", "根", "好", "長", "柱", "子"],
+        "answerPositions": [0, 1, 3, 4, 6, 8, 10, 11, 13, 14, 16, 17],
+        "order": 51,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_51.png"
+      },
+      {
+        "id": "sent_pangu_52",
+        "text": "盤古每天都在長高，一天比一天高。",
+        "words": ["盤", "古", "每", "天", "都", "長", "高", "一", "比"],
+        "answerPositions": [0, 1, 3, 4, 5, 7, 8, 10, 12],
+        "order": 52,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_52.png"
+      },
+      {
+        "id": "sent_pangu_53",
+        "text": "他頭頂的天，也一天比一天高。",
+        "words": ["他", "頭", "頂", "天", "也", "一", "比", "高"],
+        "answerPositions": [0, 2, 3, 5, 7, 9, 11, 13],
+        "order": 53,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_53.png"
+      },
+      {
+        "id": "sent_pangu_54",
+        "text": "他腳下的地，也一天比一天厚。",
+        "words": ["他", "腳", "下", "地", "也", "一", "比", "厚"],
+        "answerPositions": [0, 2, 3, 5, 7, 9, 11, 13],
+        "order": 54,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_54.png"
+      },
+      {
+        "id": "sent_pangu_55",
+        "text": "天，一天比一天藍。",
+        "words": ["天", "一", "比", "藍"],
+        "answerPositions": [0, 2, 4, 6],
+        "order": 55,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_55.png"
+      },
+      {
+        "id": "sent_pangu_56",
+        "text": "天，一天比一天亮。",
+        "words": ["天", "一", "比", "亮"],
+        "answerPositions": [0, 2, 4, 6],
+        "order": 56,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_56.png"
+      },
+      {
+        "id": "sent_pangu_57",
+        "text": "地，一天比一天大。",
+        "words": ["地", "一", "比", "大"],
+        "answerPositions": [0, 2, 4, 6],
+        "order": 57,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_57.png"
+      },
+      {
+        "id": "sent_pangu_58",
+        "text": "地，一天比一天穩。",
+        "words": ["地", "一", "比", "穩"],
+        "answerPositions": [0, 2, 4, 6],
+        "order": 58,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_58.png"
+      },
+      {
+        "id": "sent_pangu_59",
+        "text": "盤古，也一天比一天高大。",
+        "words": ["盤", "古", "也", "一", "比", "高", "大"],
+        "answerPositions": [0, 1, 3, 5, 7, 9, 10],
+        "order": 59,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_59.png"
+      },
+      {
+        "id": "sent_pangu_60",
+        "text": "他的手臂，一天比一天有力。",
+        "words": ["他", "手", "臂", "一", "比", "有", "力"],
+        "answerPositions": [0, 2, 3, 5, 7, 9, 10],
+        "order": 60,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_60.png"
+      },
+      {
+        "id": "sent_pangu_61",
+        "text": "他的雙腿，一天比一天結實。",
+        "words": ["他", "雙", "腿", "一", "比", "結", "實"],
+        "answerPositions": [0, 2, 3, 5, 7, 9, 10],
+        "order": 61,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_61.png"
+      },
+      {
+        "id": "sent_pangu_62",
+        "text": "他就這樣站了一萬年。",
+        "words": ["他", "就", "這", "樣", "站", "一", "萬", "年"],
+        "answerPositions": [0, 1, 3, 4, 6, 8, 9, 10],
+        "order": 62,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_62.png"
+      },
+      {
+        "id": "sent_pangu_63",
+        "text": "又站了八千年。",
+        "words": ["又", "站", "八", "千", "年"],
+        "answerPositions": [0, 1, 3, 4, 5],
+        "order": 63,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_63.png"
+      },
+      {
+        "id": "sent_pangu_64",
+        "text": "終於，天升得不能再高了，地也厚得不能再厚了。",
+        "words": ["終", "於", "天", "升", "不", "能", "高", "地", "厚"],
+        "answerPositions": [0, 1, 3, 4, 6, 7, 8, 11, 12],
+        "order": 64,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_64.png"
+      },
+      {
+        "id": "sent_pangu_65",
+        "text": "天和地再也不會合起來了。",
+        "words": ["天", "和", "地", "再", "也", "不", "會", "合", "起"],
+        "answerPositions": [0, 1, 2, 4, 5, 7, 8, 10, 11],
+        "order": 65,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_65.png"
+      },
+      {
+        "id": "sent_pangu_66",
+        "text": "盤古的工作，完成了。",
+        "words": ["盤", "古", "工", "作", "完", "成"],
+        "answerPositions": [0, 1, 3, 4, 6, 7],
+        "order": 66,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_66.png"
+      },
+      {
+        "id": "sent_pangu_67",
+        "text": "盤古看著這個嶄新的世界，滿意地笑了。",
+        "words": ["盤", "古", "看", "這", "個", "嶄", "新", "世", "界", "滿", "意", "笑"],
+        "answerPositions": [0, 1, 3, 5, 6, 8, 9, 11, 12, 14, 15, 17],
+        "order": 67,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_67.png"
+      },
+      {
+        "id": "sent_pangu_68",
+        "text": "可是，他也覺得好累好累，",
+        "words": ["可", "是", "他", "也", "覺", "得", "好", "累"],
+        "answerPositions": [0, 1, 3, 4, 6, 7, 9, 10],
+        "order": 68,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_68.png"
+      },
+      {
+        "id": "sent_pangu_69",
+        "text": "他耗盡了所有的力氣，再也沒有力氣站著了。",
+        "words": ["他", "耗", "盡", "所", "有", "力", "氣", "再", "也", "沒", "站"],
+        "answerPositions": [0, 1, 2, 4, 5, 7, 8, 10, 11, 13, 16],
+        "order": 69,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_69.png"
+      },
+      {
+        "id": "sent_pangu_70",
+        "text": "他慢慢地躺下，然後，他就永遠地睡著了。",
+        "words": ["他", "慢", "躺", "下", "然", "後", "就", "永", "遠", "睡"],
+        "answerPositions": [0, 2, 3, 4, 6, 7, 9, 11, 12, 15],
+        "order": 70,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_70.png"
+      },
+      {
+        "id": "sent_pangu_71",
+        "text": "他的左眼，變成了又紅又亮的太陽。",
+        "words": ["他", "左", "眼", "變", "成", "紅", "亮", "太", "陽"],
+        "answerPositions": [0, 2, 3, 5, 6, 8, 9, 11, 12],
+        "order": 71,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_71.png"
+      },
+      {
+        "id": "sent_pangu_72",
+        "text": "太陽在白天出來，給我們溫暖和光明。",
+        "words": ["太", "陽", "白", "天", "出", "給", "我", "們", "溫", "暖", "光", "明"],
+        "answerPositions": [0, 1, 3, 4, 6, 8, 9, 10, 12, 13, 15, 16],
+        "order": 72,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_72.png"
+      },
+      {
+        "id": "sent_pangu_73",
+        "text": "他的右眼，變成了又黃又溫柔的月亮。",
+        "words": ["他", "右", "眼", "變", "成", "黃", "溫", "柔", "月", "亮"],
+        "answerPositions": [0, 2, 3, 5, 6, 8, 9, 10, 12, 13],
+        "order": 73,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_73.png"
+      },
+      {
+        "id": "sent_pangu_74",
+        "text": "月亮在晚上出來，陪著星星對我們眨眼睛。",
+        "words": ["月", "亮", "晚", "上", "出", "陪", "星", "對", "我", "們", "眨", "眼", "睛"],
+        "answerPositions": [0, 1, 3, 4, 6, 8, 9, 11, 12, 13, 15, 16, 17],
+        "order": 74,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_74.png"
+      },
+      {
+        "id": "sent_pangu_75",
+        "text": "他呼出的最後一口氣，變成了風和雲。",
+        "words": ["他", "呼", "出", "最", "後", "一", "口", "氣", "變", "成", "風", "雲"],
+        "answerPositions": [0, 1, 2, 4, 5, 7, 8, 9, 11, 12, 14, 15],
+        "order": 75,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_75.png"
+      },
+      {
+        "id": "sent_pangu_76",
+        "text": "風，有時候輕輕地吹，吹在臉上好舒服。",
+        "words": ["風", "有", "時", "候", "輕", "吹", "臉", "上", "好", "舒", "服"],
+        "answerPositions": [0, 2, 3, 4, 6, 7, 10, 11, 13, 14, 15],
+        "order": 76,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_76.png"
+      },
+      {
+        "id": "sent_pangu_77",
+        "text": "有時候用力地吹，把大樹都吹彎了腰。",
+        "words": ["有", "時", "候", "用", "力", "吹", "大", "樹", "彎", "腰"],
+        "answerPositions": [0, 1, 2, 4, 5, 7, 9, 10, 12, 13],
+        "order": 77,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_77.png"
+      },
+      {
+        "id": "sent_pangu_78",
+        "text": "雲，有像棉花一樣的白雲，還有像大山一樣的烏雲。",
+        "words": ["雲", "像", "棉", "花", "白", "還", "大", "山", "烏"],
+        "answerPositions": [0, 2, 4, 5, 8, 10, 13, 14, 17],
+        "order": 78,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_78.png"
+      },
+      {
+        "id": "sent_pangu_79",
+        "text": "烏雲來了，可能就要下雨了。",
+        "words": ["烏", "雲", "來", "可", "能", "就", "要", "下", "雨"],
+        "answerPositions": [0, 1, 3, 5, 6, 8, 9, 11, 12],
+        "order": 79,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_79.png"
+      },
+      {
+        "id": "sent_pangu_80",
+        "text": "他說話的聲音，變成了天上的雷。",
+        "words": ["他", "說", "話", "聲", "音", "變", "成", "天", "雷"],
+        "answerPositions": [0, 1, 2, 4, 5, 7, 8, 10, 12],
+        "order": 80,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_80.png"
+      },
+      {
+        "id": "sent_pangu_81",
+        "text": "轟隆！轟隆！雷的聲音好大啊！",
+        "words": ["雷", "聲", "音", "好", "大"],
+        "answerPositions": [3, 4, 5, 7, 8],
+        "order": 81,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_81.png"
+      },
+      {
+        "id": "sent_pangu_82",
+        "text": "他的血液，變成了河川湖泊。",
+        "words": ["他", "血", "液", "變", "成", "河", "川", "湖", "泊"],
+        "answerPositions": [0, 2, 3, 5, 6, 8, 9, 11, 12],
+        "order": 82,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_82.png"
+      },
+      {
+        "id": "sent_pangu_83",
+        "text": "河水嘩啦啦地流，從高山流向大海。",
+        "words": ["河", "水", "嘩", "流", "高", "山", "向", "大", "海"],
+        "answerPositions": [0, 1, 3, 5, 7, 8, 10, 12, 13],
+        "order": 83,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_83.png"
+      },
+      {
+        "id": "sent_pangu_84",
+        "text": "河裡有小魚。",
+        "words": ["河", "裡", "有", "小", "魚"],
+        "answerPositions": [0, 1, 3, 5, 6],
+        "order": 84,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_84.png"
+      },
+      {
+        "id": "sent_pangu_85",
+        "text": "河裡的小魚，一天一天長大。",
+        "words": ["河", "裡", "小", "魚", "一", "長", "大"],
+        "answerPositions": [0, 1, 3, 4, 6, 8, 9],
+        "order": 85,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_85.png"
+      },
+      {
+        "id": "sent_pangu_86",
+        "text": "小魚長成了大魚。",
+        "words": ["小", "魚", "長", "成", "大", "魚"],
+        "answerPositions": [0, 1, 3, 4, 6, 7],
+        "order": 86,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_86.png"
+      },
+      {
+        "id": "sent_pangu_87",
+        "text": "大魚游得更遠，看得更多。",
+        "words": ["大", "魚", "游", "得", "更", "遠", "看", "更", "多"],
+        "answerPositions": [0, 1, 3, 4, 6, 7, 9, 11, 12],
+        "order": 87,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_87.png"
+      },
+      {
+        "id": "sent_pangu_88",
+        "text": "大魚又生了好多好多的小魚。",
+        "words": ["大", "魚", "又", "生", "好", "多", "小", "魚"],
+        "answerPositions": [0, 1, 3, 4, 6, 7, 9, 10],
+        "order": 88,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_88.png"
+      },
+      {
+        "id": "sent_pangu_89",
+        "text": "就這樣，河裡的魚，越來越多。",
+        "words": ["就", "這", "樣", "河", "裡", "魚", "越", "來", "越", "多"],
+        "answerPositions": [0, 1, 2, 4, 5, 7, 9, 10, 11, 12],
+        "order": 89,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_89.png"
+      },
+      {
+        "id": "sent_pangu_90",
+        "text": "他的頭髮和鬍鬚，變成了綠色的草地和高大的森林。",
+        "words": ["他", "頭", "髮", "鬍", "鬚", "變", "成", "綠", "色", "草", "地", "高", "大", "森", "林"],
+        "answerPositions": [0, 2, 3, 5, 6, 8, 9, 11, 12, 14, 15, 17, 18, 20, 21],
+        "order": 90,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_90.png"
+      },
+      {
+        "id": "sent_pangu_91",
+        "text": "草地好大好大，像一張綠色的地毯，我們可以在上面打滾。",
+        "words": ["草", "地", "好", "大", "像", "一", "張", "綠", "色", "地", "毯", "我", "們", "可", "以", "上", "面", "打", "滾"],
+        "answerPositions": [0, 1, 3, 4, 6, 8, 9, 11, 12, 14, 15, 17, 18, 20, 21, 23, 24, 26, 27],
+        "order": 91,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_91.png"
+      },
+      {
+        "id": "sent_pangu_92",
+        "text": "草地上的小花，一天一天長大。",
+        "words": ["草", "地", "上", "小", "花", "一", "長", "大"],
+        "answerPositions": [0, 1, 2, 4, 5, 7, 9, 10],
+        "order": 92,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_92.png"
+      },
+      {
+        "id": "sent_pangu_93",
+        "text": "小花開得更美，更香。",
+        "words": ["小", "花", "開", "得", "更", "美", "香"],
+        "answerPositions": [0, 1, 3, 4, 6, 7, 9],
+        "order": 93,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_93.png"
+      },
+      {
+        "id": "sent_pangu_94",
+        "text": "風把花兒的種子，吹到很遠的地方。",
+        "words": ["風", "把", "花", "兒", "種", "子", "吹", "到", "很", "遠", "地", "方"],
+        "answerPositions": [0, 1, 3, 4, 6, 7, 9, 10, 12, 13, 15, 16],
+        "order": 94,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_94.png"
+      },
+      {
+        "id": "sent_pangu_95",
+        "text": "那裡也開出了美麗的小花。",
+        "words": ["那", "裡", "也", "開", "出", "美", "麗", "小", "花"],
+        "answerPositions": [0, 1, 3, 5, 6, 8, 9, 11, 12],
+        "order": 95,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_95.png"
+      },
+      {
+        "id": "sent_pangu_96",
+        "text": "森林好高好高，裡面有好多好多的大樹。",
+        "words": ["森", "林", "好", "高", "裡", "面", "有", "好", "多", "大", "樹"],
+        "answerPositions": [0, 1, 3, 4, 6, 7, 9, 11, 12, 14, 15],
+        "order": 96,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_96.png"
+      },
+      {
+        "id": "sent_pangu_97",
+        "text": "森林裡的小樹，一天一天長高。",
+        "words": ["森", "林", "裡", "小", "樹", "一", "長", "高"],
+        "answerPositions": [0, 1, 2, 4, 5, 7, 9, 10],
+        "order": 97,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_97.png"
+      },
+      {
+        "id": "sent_pangu_98",
+        "text": "小樹長成了大樹。",
+        "words": ["小", "樹", "長", "成", "大", "樹"],
+        "answerPositions": [0, 1, 3, 4, 6, 7],
+        "order": 98,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_98.png"
+      },
+      {
+        "id": "sent_pangu_99",
+        "text": "大樹的葉子更多，樹蔭更大。",
+        "words": ["大", "樹", "葉", "子", "更", "多", "樹", "蔭", "更", "大"],
+        "answerPositions": [0, 1, 3, 4, 6, 7, 9, 10, 12, 13],
+        "order": 99,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_99.png"
+      },
+      {
+        "id": "sent_pangu_100",
+        "text": "大樹又生了好多新的種子。",
+        "words": ["大", "樹", "又", "生", "好", "多", "新", "種", "子"],
+        "answerPositions": [0, 1, 3, 4, 6, 7, 9, 10, 11],
+        "order": 100,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_100.png"
+      },
+      {
+        "id": "sent_pangu_101",
+        "text": "種子掉在地上，長出了新的小樹。",
+        "words": ["種", "子", "掉", "在", "地", "上", "長", "出", "新", "小", "樹"],
+        "answerPositions": [0, 1, 3, 4, 6, 7, 9, 10, 12, 13, 14],
+        "order": 101,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_101.png"
+      },
+      {
+        "id": "sent_pangu_102",
+        "text": "森林裡不只有大樹，還有高高的竹子，和會長出好吃果子的果樹。",
+        "words": ["森", "林", "裡", "不", "只", "有", "大", "樹", "還", "高", "竹", "子", "會", "長", "出", "好", "吃", "果", "子", "果", "樹"],
+        "answerPositions": [0, 1, 2, 4, 5, 7, 8, 9, 11, 12, 14, 15, 17, 18, 20, 22, 23, 25, 26, 28, 29],
+        "order": 102,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_102.png"
+      },
+      {
+        "id": "sent_pangu_103",
+        "text": "森林裡也不只有小鳥，還有好多可愛的動物。",
+        "words": ["森", "林", "裡", "也", "不", "只", "有", "小", "鳥", "還", "好", "多", "可", "愛", "動", "物"],
+        "answerPositions": [0, 1, 2, 4, 5, 6, 8, 9, 10, 12, 13, 14, 16, 17, 19, 20],
+        "order": 103,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_103.png"
+      },
+      {
+        "id": "sent_pangu_104",
+        "text": "有愛吃紅蘿蔔的小兔子。",
+        "words": ["有", "愛", "吃", "紅", "蘿", "蔔", "小", "兔", "子"],
+        "answerPositions": [0, 2, 3, 5, 6, 7, 9, 10, 11],
+        "order": 104,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_104.png"
+      },
+      {
+        "id": "sent_pangu_105",
+        "text": "有慢慢爬的綠色小烏龜。",
+        "words": ["有", "慢", "爬", "綠", "色", "小", "烏", "龜"],
+        "answerPositions": [0, 2, 3, 5, 6, 8, 9, 10],
+        "order": 105,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_105.png"
+      },
+      {
+        "id": "sent_pangu_106",
+        "text": "還有喜歡吃竹子的大熊貓。",
+        "words": ["還", "有", "喜", "歡", "吃", "竹", "子", "大", "熊", "貓"],
+        "answerPositions": [0, 1, 3, 4, 6, 8, 9, 11, 12, 13],
+        "order": 106,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_106.png"
+      },
+      {
+        "id": "sent_pangu_107",
+        "text": "小鳥在森林裡蓋房子，小猴子在樹上玩遊戲，好多小動物都在森林裡快樂地生活。",
+        "words": ["小", "鳥", "森", "林", "裡", "蓋", "房", "子", "小", "猴", "樹", "上", "玩", "遊", "戲", "好", "多", "小", "動", "物", "都", "快", "樂", "生", "活"],
+        "answerPositions": [0, 1, 3, 4, 5, 7, 8, 9, 11, 12, 14, 15, 17, 18, 19, 21, 22, 24, 25, 26, 28, 29, 30, 32, 33],
+        "order": 107,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_107.png"
+      },
+      {
+        "id": "sent_pangu_108",
+        "text": "他的骨頭，變成了高高的山和硬硬的石頭。",
+        "words": ["他", "骨", "頭", "變", "成", "高", "山", "硬", "石", "頭"],
+        "answerPositions": [0, 2, 3, 5, 6, 8, 9, 11, 12, 13],
+        "order": 108,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_108.png"
+      },
+      {
+        "id": "sent_pangu_109",
+        "text": "高山一座又一座，連在一起，保護著我們。",
+        "words": ["高", "山", "一", "座", "又", "連", "一", "起", "保", "護", "我", "們"],
+        "answerPositions": [0, 1, 3, 4, 6, 8, 10, 11, 13, 14, 16, 17],
+        "order": 109,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_109.png"
+      },
+      {
+        "id": "sent_pangu_110",
+        "text": "石頭有大的、有小的、有圓的、有方的，安靜地躺在地上。",
+        "words": ["石", "頭", "有", "大", "小", "圓", "方", "安", "靜", "躺", "地", "上"],
+        "answerPositions": [0, 1, 3, 5, 7, 9, 11, 13, 14, 16, 18, 19],
+        "order": 110,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_110.png"
+      },
+      {
+        "id": "sent_pangu_111",
+        "text": "他的汗水，變成了天上落下來的雨水。",
+        "words": ["他", "汗", "水", "變", "成", "天", "上", "落", "下", "來", "雨", "水"],
+        "answerPositions": [0, 2, 3, 5, 6, 8, 9, 11, 12, 13, 15, 16],
+        "order": 111,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_111.png"
+      },
+      {
+        "id": "sent_pangu_112",
+        "text": "雨水讓花草樹木喝飽了水，長得更高、更漂亮。",
+        "words": ["雨", "水", "讓", "花", "草", "樹", "木", "喝", "飽", "水", "長", "得", "更", "高", "漂", "亮"],
+        "answerPositions": [0, 1, 3, 5, 6, 7, 8, 10, 11, 13, 15, 16, 18, 19, 21, 22],
+        "order": 112,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_112.png"
+      },
+      {
+        "id": "sent_pangu_113",
+        "text": "盤古創造了我們現在看到的這個美麗、又有生命的世界。",
+        "words": ["盤", "古", "創", "造", "我", "們", "現", "在", "看", "到", "這", "個", "美", "麗", "又", "有", "生", "命", "世", "界"],
+        "answerPositions": [0, 1, 3, 4, 6, 7, 9, 10, 12, 13, 15, 16, 18, 19, 21, 22, 24, 25, 27, 28],
+        "order": 113,
+        "imageUrl": "https://media.githubusercontent.com/media/b94901099/Hanzi-Steps-Images/main/stories/pangu/img_story_pangu_113.png"
+      }
+    ]
+  }
+] 

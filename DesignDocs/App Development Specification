@@ -1,0 +1,73 @@
+App 開發規格書 (App Development Specification)
+產品名稱： 步步識字 (Hanzi Steps)
+文件版本： 1.0 (MVP)
+目標： 本文件旨在為「步步識字」iOS App 的 MVP 版本提供一個統一的技術架構、前端設計原則和資料流指導。
+1. 總覽與技術棧 (Overview & Tech Stack)
+前端框架 (Frontend): Apple SwiftUI
+本地資料庫 (Local Database): Apple SwiftData
+後端即服務 (Backend as a Service): Google Firebase
+資料庫: Firestore
+檔案儲存: Cloud Storage
+使用者驗證: Authentication
+聲音方案 (Audio): 裝置原生 TTS (文字轉語音)
+最低系統支援 (Minimum OS): iOS 18
+2. App 整體架構 (Overall App Architecture)
+本 App 採用「雲端同步 + 本地快取」的混合架構。
+核心資料流： Firebase (雲端) <==> App 核心邏輯 <==> SwiftData (本地) <==> SwiftUI (介面)
+運作模式 (圖書館比喻):
+Firebase 是我們的「中央圖書總管」，存放所有最新的故事、漢字、遊戲、配件等內容。
+App 首次啟動或需要更新時，會從 Firebase 同步最新的內容。
+同步下來的內容，會被儲存在手機本地的 SwiftData 中，作為離線快取。
+SwiftUI 介面優先從本地的 SwiftData 讀取資料，以確保 App 反應迅速且具備完整的離線使用能力。
+2.1 MVP 實作策略：本地優先 (MVP Implementation Strategy: Local First)
+目標： 為了確保 MVP 版本擁有最極致的首次啟動體驗，並能快速上線，我們將採用「本地內容預置」策略。
+執行方式：
+內容打包 (Content Bundling): 第一個故事《盤古開天》所需的所有資料（來自 stories, sentences, characters 等集合的內容）將被預先整理成一個或多個 JSON 檔案，直接包含在 App 的安裝包中。
+首次資料庫填充 (Initial Seeding): 當使用者第一次啟動 App 時，程式會檢查本地 SwiftData 是否為空。若是，則會讀取 App 包內的 JSON 檔案，並將所有內容一次性寫入 SwiftData 資料庫。
+使用者體驗： 此過程對使用者是透明且瞬間完成的。結果是，使用者下載 App 後，無需聯網即可立即開始體驗第一個故事的完整內容。
+與雲端架構的關係： 儘管 MVP 的內容是本地預置的，但整個 App 的程式碼架構依然會按照與 Firebase 溝通的模式來搭建。這確保了當我們準備好推出第二個故事時，只需啟用雲端同步功能，即可無縫地為使用者提供新內容，而無需重新開發 App。
+3. 資料結構設計 (Data Structure Design)
+資料儲存於 Firebase Firestore 中，主要包含以下核心集合 (Collections)。我們的設計原則是「關聯但不耦合」，透過 ID 進行連結。
+stories: 存放故事元數據。
+欄位: title, coverImageUrl, level, description, contentFlow (有序的內容流列表，包含句子與遊戲)。
+舉例說明： 當 App 要呈現《盤古開天》時，它會讀取 stories 集合中 ID 為 story_pangu 的文件。從中獲取 contentFlow 這個陣列，這個陣列就是整個故事的「劇本」，告訴 App 接下來應該顯示句子 sent_pangu_01，然後是句子 sent_pangu_02，接著是一個遊戲 storygame_pangu_01，以此類推。
+sentences: 存放所有句子。
+欄位: text, sceneImageUrl, storyId, coreCharacterIds。
+舉例說明： 根據劇本，App 需要顯示 sent_pangu_01。它便會用這個 ID 來本集合中讀取對應的文件，從而獲得句子文本 "天 和 地 ， 在 一起 。" 以及該場景的插圖路徑。
+characters: 存放所有漢字。
+欄位: value, pinyin, zhuyin, imageUrl。
+舉例說明： 在閱讀句子時，如果樂樂點擊了「天」這個字，App 會知道這個字的 ID 是 char_001。接著 App 會用 char_001 到本集合中查找，從而獲得它的拼音 "tiān" 和單字卡圖片，並顯示給樂樂看。
+accessories: 存放所有可兌換的公仔配件目錄。
+欄位: name, imageUrl, coinCost。
+舉例說明： 「英雄/神話書」頁面中的商店部分，就是透過讀取此集合的所有文件來動態生成的。它會顯示一個列表，包含「開天神斧」(200金幣)、「混沌披風」(150金幣) 等。
+games: 存放遊戲的「模板」。
+欄位: gameType, title, ruleDescription, uiLayout。
+舉例說明： 這個集合定義了我們有幾種「玩法」。例如，ID 為 matching_image_to_char 的文件定義了「圖文配對」這種玩法的所有通用元素，如標題、規則說明和 UI 佈局（如一個 2x2 的網格）。
+story_games: 存放遊戲的「實例」，即具體題目內容。
+欄位: storyId, templateId, triggerAfterSentenceId, gameData (包含題目、選項、正確答案)。
+舉例說明： 故事劇本說現在該玩 storygame_pangu_01 了。App 讀取此文件後，首先看到 templateId 是 matching_image_to_char，於是它就去 games 集合把「圖文配對」的玩法模板拿過來，搭建好遊戲介面。然後，它再讀取本文件中的 gameData，把 "天"、"土"、"水"、"木" 這四個選項填入介面，並標記 "天" 為正確答案。
+users: 存放用戶資料。
+結構: 每個 user 文件下包含一個 child_profiles 子集合，用於存放多個孩子的獨立檔案。
+child_profiles 文件欄位: profileName, profileAvatar, currentLevel, coinBalance, learnedCharacterIds, unlockedAccessories 等。
+child_profiles 文件下再包含 ledger_entries 子集合，記錄每一筆金幣交易。
+舉例說明： 陳女士登入後，App 讀取她的 user 文件，並獲取其下的 child_profiles 集合，顯示出「樂樂」和「妹妹」兩個檔案供她選擇。她選擇「樂樂」後，App 就會讀取「樂樂」這個文件的所有資料，例如他有 350 個金幣、當前閱讀等級是 Level 2 等，從而為樂樂呈現個人化的遊戲體驗。
+4. 前端設計與技術細節 (Frontend Design & Technical Details)
+主要頁面 (Screens):
+啟動與選擇檔案頁 (Launch & Profile Selection Screen): App 的入口，以卡片或列表形式展示家庭中的所有孩子檔案供用戶選擇。
+主故事庫頁 (Main Story Library Screen): 以視覺化的書架或分組列表形式，按等級 (Level 1, Level 2...) 展示所有故事封面。
+故事閱讀器頁 (Story Reader Screen): 沉浸式閱讀介面，上方為場景圖，下方為帶有朗讀按鈕的句子文本。
+英雄/神話書頁 (Hero/Myths Collection Screen): 左側為英雄公仔展示與裝扮區，右側為可兌換的配件商店列表。
+親子獎勵帳本頁 (Parent-Child Ledger Screen): 一個類似銀行存摺的介面，清晰列出每一筆金幣的增減紀錄。
+家長中心頁 (Parental Center Screen): 包含各子女學習進度圖表、App 設定選項等功能的儀表板。
+資源命名規範 (Asset Naming Convention):
+採用 類型_主體ID_細節描述.副檔名 的格式。
+範例: img_story_pangu_cover.png, img_char_001_tian.png。
+API 資料契約 (API Data Contract):
+當圖片欄位為空或載入失敗時，前端將直接隱藏該圖片區塊。
+舉例說明： 若 sentences 文件中的 sceneImageUrl 欄位為空，則故事閱讀器頁面將只顯示文字，圖片區塊不被渲染，避免出現空白或錯誤圖示。
+介面國際化 (Internationalization, i18n):
+所有 UI 介面文字需使用 Localizable.strings 檔案進行管理，以支援中/英文切換。
+舉例說明： 在程式碼中不應寫死 let buttonTitle = "設定"，而應寫成 let buttonTitle = localizedString("SettingsButtonTitle")。其中 localizedString 函數會根據用戶的手機語言，從對應的語言檔案中查找並返回 '設定' 或 'Settings'。
+
+
+
