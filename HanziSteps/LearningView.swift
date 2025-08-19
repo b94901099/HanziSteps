@@ -9,116 +9,74 @@ import SwiftUI
 import SwiftData
 import AVFoundation
 
-struct DropDelegate: SwiftUI.DropDelegate {
-    let index: Int
-    @Binding var grid: [String?]
-    @Binding var draggedWord: String?
-
-    func performDrop(info: DropInfo) -> Bool {
-        if let dragged = draggedWord {
-            grid[index] = dragged
-            return true
-        }
-        return false
-    }
-
-    func dropEntered(info: DropInfo) {
-        if let dragged = draggedWord {
-            grid[index] = dragged
-        }
-    }
-
-    func dropExited(info: DropInfo) {
-        if grid[index] == draggedWord {
-            grid[index] = nil
-        }
-    }
-}
-
 struct LearningView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
     @Query private var sentences: [Sentence]
-    @State private var draggedWord: String? = nil
-    @State private var grid: [String?] = []
-    @State private var cards: [String] = []
+    @State private var synthesizer = AVSpeechSynthesizer()
 
     var body: some View {
-        NavigationView {
-            VStack(spacing: 20) {
-                // 句子展示區
-                Text(sentences.first?.text ?? "無句子")
-                    .font(.title)
-                    .padding()
-
-                // 格子區
-                HStack(spacing: 10) {
-                    ForEach(0..<grid.count, id: \.self) { index in
-                        ZStack {
-                            Rectangle()
-                                .frame(width: 100, height: 100)
-                                .border(grid[index] == nil ? Color.gray : Color.green)
-                            Text(grid[index] ?? "")
-                                .font(.title)
-                        }
-                        .onDrop(of: [.text], delegate: DropDelegate(index: index, grid: $grid, draggedWord: $draggedWord))
-                    }
-                }
-
-                // 卡片區
-                ScrollView(.horizontal) {
-                    HStack(spacing: 10) {
-                        ForEach(cards, id: \.self) { word in
-                            Text(word)
-                                .font(.title)
-                                .frame(width: 100, height: 100)
-                                .background(Color.yellow)
-                                .cornerRadius(10)
-                                .onDrag {
-                                    draggedWord = word
-                                    return NSItemProvider(object: word as NSString)
-                                }
-                        }
-                    }
-                }
-                .frame(height: 120)
-
-                // 朗讀按鈕
-                Button("朗讀句子") {
-                    speakSentence()
-                }
+        VStack(spacing: 20) {
+            // 句子展示區
+            Text(sentences.first?.text ?? "無句子")
+                .font(.title)
                 .padding()
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .cornerRadius(10)
-            }
-            .navigationTitle("認字練習")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button("返回") {
-                        dismiss()
+                .multilineTextAlignment(.center)
+            
+            // 單字展示區
+            if let sentence = sentences.first {
+                LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 4), spacing: 12) {
+                    ForEach(sentence.words, id: \.self) { word in
+                        Text(word)
+                            .font(.title2)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.black)
+                            .frame(width: 60, height: 60)
+                            .background(Color.yellow)
+                            .cornerRadius(8)
                     }
                 }
+                .padding(.horizontal, 20)
             }
-            .onAppear {
-                setupPreviewData()
-                if let sentence = sentences.first {
-                    cards = sentence.words
-                    // 根據句子長度動態調整 grid 大小
-                    grid = Array(repeating: nil, count: sentence.text.count)
+            
+            Spacer()
+            
+            // 朗讀按鈕
+            Button("朗讀句子") {
+                speakSentence()
+            }
+            .padding()
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(10)
+            
+            Spacer()
+        }
+        .navigationTitle("認字練習")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button("返回") {
+                    dismiss()
                 }
             }
+        }
+        .onAppear {
+            setupPreviewData()
         }
     }
     
     func speakSentence() {
         guard let sentence = sentences.first?.text else { return }
+        print("🔊 開始朗讀句子: \(sentence)")
+        
         let utterance = AVSpeechUtterance(string: sentence)
         utterance.voice = AVSpeechSynthesisVoice(language: "zh-TW")
         utterance.rate = 0.5
-        let synthesizer = AVSpeechSynthesizer()
+        utterance.volume = 1.0
+        
         synthesizer.speak(utterance)
+        print("🎤 朗讀已開始")
     }
     
     // MARK: - 預覽數據設置

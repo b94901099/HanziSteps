@@ -9,6 +9,25 @@ import SwiftUI
 import SwiftData
 import AVFoundation
 
+// MARK: - 語音合成代理類
+class SpeechSynthesizerDelegate: NSObject, AVSpeechSynthesizerDelegate {
+    var onStart: (() -> Void)?
+    var onFinish: (() -> Void)?
+    var onCancel: (() -> Void)?
+    
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
+        onStart?()
+    }
+    
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        onFinish?()
+    }
+    
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
+        onCancel?()
+    }
+}
+
 struct StoryReaderView: View {
     let storyId: String
     @Environment(\.modelContext) private var modelContext
@@ -17,7 +36,8 @@ struct StoryReaderView: View {
     @State private var isSpeaking = false
     @State private var speechMessage = ""
     @State private var synthesizer = AVSpeechSynthesizer()
-    @State private var speechDelegate = SpeechDelegate()
+    @State private var speechDelegate = SpeechSynthesizerDelegate()
+
     
     private var currentStory: Story? {
         stories.first { $0.id == storyId }
@@ -234,10 +254,10 @@ struct StoryReaderView: View {
             .frame(width: geometry.size.width, height: geometry.size.height)
         }
         .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
+        .toolbar(.hidden, for: .navigationBar)
         .onAppear {
             print("📖 開始閱讀故事: \(storyId)")
-            // 檢測可用的語音選項
-            logAvailableVoices()
         }
     }
     
@@ -252,8 +272,6 @@ struct StoryReaderView: View {
         // 停止當前朗讀
         if synthesizer.isSpeaking {
             synthesizer.stopSpeaking(at: .immediate)
-            isSpeaking = false
-            speechMessage = ""
         }
         
         withAnimation(.easeInOut(duration: 0.3)) {
@@ -265,8 +283,6 @@ struct StoryReaderView: View {
         // 停止當前朗讀
         if synthesizer.isSpeaking {
             synthesizer.stopSpeaking(at: .immediate)
-            isSpeaking = false
-            speechMessage = ""
         }
         
         withAnimation(.easeInOut(duration: 0.3)) {
@@ -322,42 +338,18 @@ struct StoryReaderView: View {
         // 如果正在朗讀，先停止
         if synthesizer.isSpeaking {
             synthesizer.stopSpeaking(at: .immediate)
-            isSpeaking = false
-            speechMessage = ""
             return
         }
         
-        isSpeaking = true
-        speechMessage = "正在準備朗讀..."
-        
         let utterance = AVSpeechUtterance(string: sentence)
-        
-        // 嘗試使用高品質語音選項
-        if let enhancedVoice = getEnhancedVoice() {
-            utterance.voice = enhancedVoice
-        } else {
-            // 備用語音選項
-            if let voice = AVSpeechSynthesisVoice(language: "zh-TW") {
-                utterance.voice = voice
-            } else if let voice = AVSpeechSynthesisVoice(language: "zh-CN") {
-                utterance.voice = voice
-            } else if let voice = AVSpeechSynthesisVoice(language: "zh") {
-                utterance.voice = voice
-            } else {
-                utterance.voice = AVSpeechSynthesisVoice()
-            }
-        }
-        
-        // 優化語音參數，讓聲音更自然
-        utterance.rate = 0.42  // 稍微慢一點，更自然
+        utterance.voice = AVSpeechSynthesisVoice(language: "zh-TW")
+        utterance.rate = 0.5
         utterance.volume = 1.0
-        utterance.pitchMultiplier = 1.05  // 稍微提高音調，更生動
-        utterance.preUtteranceDelay = 0.15  // 開始前稍微延遲
-        utterance.postUtteranceDelay = 0.25  // 結束後稍微延遲
         
         // 設置代理回調
         speechDelegate.onStart = {
             DispatchQueue.main.async {
+                self.isSpeaking = true
                 self.speechMessage = "正在朗讀..."
             }
         }
@@ -367,6 +359,7 @@ struct StoryReaderView: View {
                 self.isSpeaking = false
                 self.speechMessage = "朗讀完成"
                 
+                // 2秒後清除消息
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     self.speechMessage = ""
                 }
@@ -376,97 +369,25 @@ struct StoryReaderView: View {
         speechDelegate.onCancel = {
             DispatchQueue.main.async {
                 self.isSpeaking = false
-                self.speechMessage = "朗讀被取消"
+                self.speechMessage = "朗讀已取消"
                 
+                // 2秒後清除消息
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     self.speechMessage = ""
                 }
             }
         }
         
+        // 設置代理來監聽朗讀狀態
         synthesizer.delegate = speechDelegate
+        
         synthesizer.speak(utterance)
     }
     
-    // MARK: - 獲取高品質語音
-    private func getEnhancedVoice() -> AVSpeechSynthesisVoice? {
-        // 嘗試獲取高品質的中文語音
-        let preferredVoices = [
-            "zh-TW",      // 繁體中文（台灣）
-            "zh-CN",      // 簡體中文（中國）
-            "zh-HK",      // 繁體中文（香港）
-            "zh"          // 通用中文
-        ]
-        
-        for language in preferredVoices {
-            // 獲取該語言的所有可用語音
-            let voices = AVSpeechSynthesisVoice.speechVoices()
-            let languageVoices = voices.filter { $0.language.starts(with: language) }
-            
-            // 優先選擇高品質語音（Enhanced Quality）
-            if let enhancedVoice = languageVoices.first(where: { $0.quality == .enhanced }) {
-                print("🎤 使用高品質語音: \(enhancedVoice.name) (\(enhancedVoice.language))")
-                return enhancedVoice
-            }
-            
-            // 如果沒有高品質語音，選擇神經網絡語音（Neural Quality）
-            if let neuralVoice = languageVoices.first(where: { $0.quality == .neural }) {
-                print("🎤 使用神經網絡語音: \(neuralVoice.name) (\(neuralVoice.language))")
-                return neuralVoice
-            }
-            
-            // 最後選擇標準語音
-            if let standardVoice = languageVoices.first {
-                print("🎤 使用標準語音: \(standardVoice.name) (\(standardVoice.language))")
-                return standardVoice
-            }
-        }
-        
-        // 如果沒有找到中文語音，嘗試使用系統默認語音
-        if let defaultVoice = AVSpeechSynthesisVoice.speechVoices().first {
-            print("🎤 使用系統默認語音: \(defaultVoice.name) (\(defaultVoice.language))")
-            return defaultVoice
-        }
-        
-        return nil
-    }
-    
-    // MARK: - 語音質量檢測
-    private func logAvailableVoices() {
-        let voices = AVSpeechSynthesisVoice.speechVoices()
-        let chineseVoices = voices.filter { $0.language.starts(with: "zh") }
-        
-        print("🔍 可用的中文語音:")
-        for voice in chineseVoices {
-            let quality = voice.quality == .enhanced ? "高品質" : 
-                         voice.quality == .neural ? "神經網絡" : "標準"
-            print("  - \(voice.name) (\(voice.language)) - \(quality)")
-        }
-        
-        if chineseVoices.isEmpty {
-            print("⚠️ 沒有找到中文語音，將使用系統默認語音")
-        }
-    }
+
 }
 
-// MARK: - 語音代理
-class SpeechDelegate: NSObject, AVSpeechSynthesizerDelegate {
-    var onStart: (() -> Void)?
-    var onFinish: (() -> Void)?
-    var onCancel: (() -> Void)?
-    
-    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
-        onFinish?()
-    }
-    
-    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
-        onStart?()
-    }
-    
-    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
-        onCancel?()
-    }
-}
+
 
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
